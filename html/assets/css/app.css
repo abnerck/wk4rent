@@ -1688,12 +1688,11 @@ textarea.form-control {
   background: transparent;
   font-family: "Khula", sans-serif;
   font-size: 15px;
-  /* 14px */
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   position: relative;
-  color: #cecefc;
+  color: #040408; /* Cambiado de #cecefc a #040408 */
   box-shadow: none;
 }
 @media (max-width: 430px) {
@@ -1707,11 +1706,11 @@ textarea.form-control {
 .form-control:focus {
   box-shadow: none;
   outline: 0;
-  color: #cecefc !important;
+  color: #040408 !important; /* Cambiado de #cecefc a #040408 */
   background: transparent;
 }
 .form-control:hover {
-  color: #cecefc !important;
+  color: #040408 !important; /* Cambiado de #cecefc a #040408 */
 }
 .form-control::placeholder {
   color: #45474f;
@@ -1722,6 +1721,7 @@ textarea.form-control {
   top: 16px;
   left: 18px;
 }
+
 
 .input-block {
   border-radius: 0px;

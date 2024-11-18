@@ -2,109 +2,133 @@
 <html lang="en">
 
 <head>
-    <!-- Agregar Bootstrap desde un CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Meta tags and CSS links -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Car Rental || E-Learning HTML Template">
-
-    <title>Car rental</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Reservation</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/media/user/wk.jpg">
-
-    <!-- All CSS files -->
+    <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/vendor/font-awesome.css">
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/vendor/smoothScorllbar.css">
-    <link rel="stylesheet" href="assets/css/vendor/classic.css">
-    <link rel="stylesheet" href="assets/css/vendor/classic.date.css">
     <link rel="stylesheet" href="assets/css/app.css">
+
     <style>
-    .car-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 20px;
-    }
-    .car-card {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        width: 300px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        background-color: #fff;
-    }
-    .car-image {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-    .car-info {
-        padding: 15px;
-    }
-    .car-info h3 {
-        font-size: 24px;
-        margin: 10px 0;
-        color: #000;
-    }
-    .car-info p {
-        font-size: 16px;
-        color: #000;
-        margin: 5px 0;
-    }
-    .price {
-        font-size: 20px;
-        color: #e63946;
-        font-weight: bold;
-    }
-    .reserve-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #000;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-</style>
+        .form-container {
+            padding: 30px;
+            border-radius: 15px;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
 
+        .form-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .summary-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .summary-icon {
+            font-size: 24px;
+            color: #007bff;
+            margin-right: 15px;
+        }
+
+        .summary-label {
+            font-weight: bold;
+            color: #333;
+            width: 150px;
+        }
+
+        .summary-value {
+            flex: 1;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .card-footer {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 
 <body class="x-hidden">
 
+    <!-- Header -->
     <header class="header my-40">
         <div class="container-fluid">
             <nav class="navigation d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo">
+                <a href="index.html" class="logo">
                     <img src="assets/media/user/kt.jpg" alt="/logo" class="header-logo" style="width: 200px;">
                 </a>
-                
-                <style>
-                    .logo h2 {
-                        font-family: 'Haarlem Sans';
-                        font-size: 50px; /* Ajusta el tamaño del texto */
-                        font-weight: bold; /* Opcional, si deseas que el texto sea en negritas */
-                        color: #333; /* Ajusta el color del texto */
-                        margin: 0; /* Elimina márgenes adicionales */
-                        padding: 0; /* Elimina rellenos adicionales */
-                        text-transform: uppercase; /* Opcional, para poner todo en mayúsculas */
-                    }
-                </style>
-    <div class="menu-button-right">
+
+                <div class="menu-button-right">
                     <div class="main-menu__nav">
                         <ul class="main-menu__list">
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            
+                            <li><a href="index.html">Home</a></li>
                             <li class="dropdown">
                                 <a href="javascript:void(0);">Rental</a>
                                 <ul>
@@ -113,34 +137,16 @@
                                     <li><a href="vehicle-details.html">Vehicle details</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="about.html">About us</a>
-                            </li> 
-                            <li>
-                                <a href="contact.html">Contact us</a>
-                            </li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="main-menu__right">
                     <div class="search-heart-icon d-md-flex d-none align-items-center gap-24">
                         <a href="book-now.html" class="cus-btn">
-                            <span class="btn-text">
-                                Book now
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
-                                    fill="none">
-                                    <path
-                                        d="M18.0098 6.62C17.9083 6.37565 17.7141 6.18147 17.4698 6.08C17.3496 6.02876 17.2205 6.00158 17.0898 6H7.08978C6.82457 6 6.57021 6.10536 6.38268 6.29289C6.19514 6.48043 6.08978 6.73478 6.08978 7C6.08978 7.26522 6.19514 7.51957 6.38268 7.70711C6.57021 7.89464 6.82457 8 7.08978 8H14.6798L6.37978 16.29C6.28605 16.383 6.21166 16.4936 6.16089 16.6154C6.11012 16.7373 6.08398 16.868 6.08398 17C6.08398 17.132 6.11012 17.2627 6.16089 17.3846C6.21166 17.5064 6.28605 17.617 6.37978 17.71C6.47275 17.8037 6.58335 17.8781 6.70521 17.9289C6.82707 17.9797 6.95777 18.0058 7.08978 18.0058C7.22179 18.0058 7.3525 17.9797 7.47436 17.9289C7.59622 17.8781 7.70682 17.8037 7.79978 17.71L16.0898 9.41V17C16.0898 17.2652 16.1951 17.5196 16.3827 17.7071C16.5702 17.8946 16.8246 18 17.0898 18C17.355 18 17.6094 17.8946 17.7969 17.7071C17.9844 17.5196 18.0898 17.2652 18.0898 17V7C18.0882 6.86932 18.061 6.74022 18.0098 6.62Z" />
-                                </svg>
-                            </span>
-                            <span>
-                                Book now
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
-                                    fill="none">
-                                    <path
-                                        d="M18.0098 6.62C17.9083 6.37565 17.7141 6.18147 17.4698 6.08C17.3496 6.02876 17.2205 6.00158 17.0898 6H7.08978C6.82457 6 6.57021 6.10536 6.38268 6.29289C6.19514 6.48043 6.08978 6.73478 6.08978 7C6.08978 7.26522 6.19514 7.51957 6.38268 7.70711C6.57021 7.89464 6.82457 8 7.08978 8H14.6798L6.37978 16.29C6.28605 16.383 6.21166 16.4936 6.16089 16.6154C6.11012 16.7373 6.08398 16.868 6.08398 17C6.08398 17.132 6.11012 17.2627 6.16089 17.3846C6.21166 17.5064 6.28605 17.617 6.37978 17.71C6.47275 17.8037 6.58335 17.8781 6.70521 17.9289C6.82707 17.9797 6.95777 18.0058 7.08978 18.0058C7.22179 18.0058 7.3525 17.9797 7.47436 17.9289C7.59622 17.8781 7.70682 17.8037 7.79978 17.71L16.0898 9.41V17C16.0898 17.2652 16.1951 17.5196 16.3827 17.7071C16.5702 17.8946 16.8246 18 17.0898 18C17.355 18 17.6094 17.8946 17.7969 17.7071C17.9844 17.5196 18.0898 17.2652 18.0898 17V7C18.0882 6.86932 18.061 6.74022 18.0098 6.62Z" />
-                                </svg>
-                            </span>
+                            <span class="btn-text">Book now</span>
+                            <span>Book now</span>
                         </a>
                     </div>
                     <a href="#" class="d-xl-none d-flex main-menu__toggler mobile-nav__toggler">
@@ -149,117 +155,208 @@
                 </div>
             </nav>
         </div>
-                
     </header>
-    <section>
 
+    <!-- Main Content -->
+    <main>
+        <div class="container my-5">
+            <?php
 
-
-    <?php
-// Configuración de conexión
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "wk4rent";
-
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
-// Verifica si se pasó el parámetro id en la URL
-if (isset($_GET['id'])) {
-    $id_coche = $_GET['id'];
-    $sql = "SELECT * FROM automoviles WHERE id = $id_coche";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $coche = $result->fetch_assoc();
-        echo "<h1>Reservar: " . $coche['marca'] . " " . $coche['modelo'] . "</h1>";
-        echo "<p>Precio por día: $" . number_format($coche['precio'], 2) . "</p>";
-
-        // Verifica si el formulario ha sido enviado
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $nombre_cliente = $_POST['nombre_cliente'];
-            $telefono_cliente = $_POST['telefono_cliente'];
-            $email_cliente = $_POST['email_cliente'];
-            $ubicacion_entrega = $_POST['ubicacion'];
-            $fecha_inicio = $_POST['fecha_inicio'];
-            $fecha_fin = $_POST['fecha_fin'];
-            $precio_por_dia = $coche['precio'];
-
-            // Calcular el número de días
-            $inicio = new DateTime($fecha_inicio);
-            $fin = new DateTime($fecha_fin);
-            $dias = $inicio->diff($fin)->days;
-
-            // Calcular el precio total
-            $total = $precio_por_dia * $dias;
-
-            // Mostrar el resumen
-            echo "<h2>Resumen de tu reserva:</h2>";
-            echo "<p>Nombre: $nombre_cliente</p>";
-            echo "<p>Email: $email_cliente</p>";
-            echo "<p>Teléfono: $telefono_cliente</p>";
-            echo "<p>Ubicación de entrega: $ubicacion_entrega</p>";
-            echo "<p>Fecha inicio: $fecha_inicio</p>";
-            echo "<p>Fecha fin: $fecha_fin</p>";
-            echo "<p>Días: $dias</p>";
-            echo "<p>Total: $" . number_format($total, 2) . "</p>";
-
-            // Formulario para procesar el pago
-            echo '<form method="POST" action="pagos.php">';
-            echo '<input type="hidden" name="id_auto" value="'.$coche['id'].'">';
-            echo '<input type="hidden" name="nombre_cliente" value="'.$nombre_cliente.'">';
-            echo '<input type="hidden" name="telefono_cliente" value="'.$telefono_cliente.'">';
-            echo '<input type="hidden" name="email_cliente" value="'.$email_cliente.'">';
-            echo '<input type="hidden" name="ubicacion_entrega" value="'.$ubicacion_entrega.'">';
-            echo '<input type="hidden" name="fecha_inicio" value="'.$fecha_inicio.'">';
-            echo '<input type="hidden" name="fecha_fin" value="'.$fecha_fin.'">';
-            echo '<input type="hidden" name="dias" value="'.$dias.'">';
-            echo '<input type="hidden" name="total" value="'.$total.'">';
-            echo '<button type="submit">Pagar Ahora</button>';
-            echo '</form>';
-        } else {
-            // Mostrar el formulario de entrada
-            echo '<form method="POST">';
-            echo '<label>Nombre:</label><input type="text" name="nombre_cliente" required>';
-            echo '<label>Teléfono:</label><input type="text" name="telefono_cliente">';
-            echo '<label>Email:</label><input type="email" name="email_cliente" required>';
-            echo '<label>Ubicación de entrega:</label><input type="text" name="ubicacion" required>';
-            echo '<label>Fecha inicio:</label><input type="date" name="fecha_inicio" required>';
-            echo '<label>Fecha fin:</label><input type="date" name="fecha_fin" required>';
-            echo '<button type="submit">Calcular precio</button>';
-            echo '</form>';
-        }
-    } else {
-        echo "Coche no encontrado.";
-    }
-} else {
-    echo "No se ha seleccionado ningún coche.";
-}
-
-// Cerrar conexión
-$conn->close();
-?>
+            require '../vendor/autoload.php';
 
 
 
 
-</section>
-<footer class="pt-40">
+
+
+            // Database connection settings
+            $conn = new mysqli("localhost", "root", "", "wk4rent");
+
+            if ($conn->connect_error) {
+                die("<div class='alert alert-danger'>Connection failed: " . $conn->connect_error . "</div>");
+            }
+
+            if (isset($_GET['id'])) {
+                $id_auto = intval($_GET['id']);
+                $stmt = $conn->prepare("SELECT * FROM automoviles WHERE id = ?");
+                $stmt->bind_param("i", $id_auto);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    $car = $result->fetch_assoc();
+            ?>
+                    <h1 class="mb-4 text-center">Reserve: <strong><?= htmlspecialchars($car['marca'] . " " . $car['modelo']); ?></strong></h1>
+                    <p class="text-muted text-center">Price per day: <strong>$<?= number_format($car['precio'], 2); ?></strong></p>
+
+                    <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $nombre_cliente = htmlspecialchars($_POST['nombre_cliente']);
+                        $telefono_cliente = htmlspecialchars($_POST['phone_number']);
+                        $email_cliente = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+                        $ubicacion_entrega = htmlspecialchars($_POST['delivery_location']);
+                        $fecha_inicio = $_POST['start_date'];
+                        $fecha_fin = $_POST['end_date'];
+
+                        if (strtotime($fecha_inicio) >= strtotime($fecha_fin)) {
+                            echo "<div class='alert alert-danger'>The start date must be earlier than the end date.</div>";
+                            exit;
+                        }
+
+                        $precio_por_dia = $car['precio'];
+                        $start = new DateTime($fecha_inicio);
+                        $end = new DateTime($fecha_fin);
+                        $dias = $start->diff($end)->days;
+
+                        $dias = max(1, $dias);
+
+                        $total = $precio_por_dia * $dias;
+                    ?>
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                Reservation Summary
+                            </div>
+                            <div class="card-body">
+                                <div class="summary-item">
+                                    <i class="fa fa-user summary-icon"></i>
+                                    <span class="summary-label">Name:</span>
+                                    <span class="summary-value"><?= htmlspecialchars($nombre_cliente); ?></span>
+                                </div>
+                                <div class="summary-item">
+                                    <i class="fa fa-envelope summary-icon"></i>
+                                    <span class="summary-label">Email:</span>
+                                    <span class="summary-value"><?= htmlspecialchars($email_cliente); ?></span>
+                                </div>
+                                <div class="summary-item">
+                                    <i class="fa fa-phone summary-icon"></i>
+                                    <span class="summary-label">Phone Number:</span>
+                                    <span class="summary-value"><?= htmlspecialchars($telefono_cliente); ?></span>
+                                </div>
+                                <div class="summary-item">
+                                    <i class="fa fa-map-marker summary-icon"></i>
+                                    <span class="summary-label">Delivery Location:</span>
+                                    <span class="summary-value"><?= htmlspecialchars($ubicacion_entrega); ?></span>
+                                </div>
+                                <div class="summary-item">
+                                    <i class="fa fa-calendar summary-icon"></i>
+                                    <span class="summary-label">Start Date:</span>
+                                    <span class="summary-value"><?= htmlspecialchars($fecha_inicio); ?></span>
+                                </div>
+                                <div class="summary-item">
+                                    <i class="fa fa-calendar-check summary-icon"></i>
+                                    <span class="summary-label">End Date:</span>
+                                    <span class="summary-value"><?= htmlspecialchars($fecha_fin); ?></span>
+                                </div>
+                                <div class="summary-item">
+                                    <i class="fa fa-clock summary-icon"></i>
+                                    <span class="summary-label">Days:</span>
+                                    <span class="summary-value"><?= $dias; ?></span>
+                                </div>
+                                <div class="summary-item">
+                                    <i class="fa fa-dollar-sign summary-icon"></i>
+                                    <span class="summary-label">Total:</span>
+                                    <span class="summary-value text-success"><strong>$<?= number_format($total, 2); ?></strong></span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <form method="POST" action="pagos.php">
+                                    <input type="hidden" name="id_auto" value="<?= $id_auto; ?>">
+                                    <input type="hidden" name="total" value="<?= $total; ?>">
+                                    <input type="hidden" name="nombre_cliente" value="<?= htmlspecialchars($nombre_cliente); ?>">
+                                    <input type="hidden" name="telefono_cliente" value="<?= htmlspecialchars($telefono_cliente); ?>">
+                                    <input type="hidden" name="email_cliente" value="<?= htmlspecialchars($email_cliente); ?>">
+                                    <input type="hidden" name="ubicacion_entrega" value="<?= htmlspecialchars($ubicacion_entrega); ?>">
+                                    <input type="hidden" name="fecha_inicio" value="<?= htmlspecialchars($fecha_inicio); ?>">
+                                    <input type="hidden" name="fecha_fin" value="<?= htmlspecialchars($fecha_fin); ?>">
+                                    <input type="hidden" name="dias" value="<?= $dias; ?>">
+                                    <button type="submit" class="btn btn-success">Pay Now with MercadoPago</button>
+                                </form>
+
+                                <div class="mt-3">
+                                    <form method="POST" action="paypal_payment.php">
+                                        <input type="hidden" name="id_auto" value="<?= $id_auto; ?>">
+                                        <input type="hidden" name="total" value="<?= $total; ?>">
+                                        <input type="hidden" name="nombre_cliente" value="<?= htmlspecialchars($nombre_cliente); ?>">
+                                        <input type="hidden" name="telefono_cliente" value="<?= htmlspecialchars($telefono_cliente); ?>">
+                                        <input type="hidden" name="email_cliente" value="<?= htmlspecialchars($email_cliente); ?>">
+                                        <input type="hidden" name="ubicacion_entrega" value="<?= htmlspecialchars($ubicacion_entrega); ?>">
+                                        <input type="hidden" name="fecha_inicio" value="<?= htmlspecialchars($fecha_inicio); ?>">
+                                        <input type="hidden" name="fecha_fin" value="<?= htmlspecialchars($fecha_fin); ?>">
+                                        <input type="hidden" name="dias" value="<?= $dias; ?>">
+                                        <button type="submit" class="btn btn-primary">Pay Now with PayPal</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php
+                    } else {
+                        // Display the reservation form
+                    ?>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <form method="POST" class="form-container mt-4">
+                                    <h4 class="form-title">Reservation Details</h4>
+                                    <div class="mb-3">
+                                        <label for="customer_name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="customer_name" name="nombre_cliente" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone_number" class="form-label">Phone Number</label>
+                                        <input type="text" class="form-control" id="phone_number" name="phone_number">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="delivery_location" class="form-label">Delivery Location</label>
+                                        <select class="form-control" id="delivery_location" name="delivery_location" required>
+                                            <option value="Cancun (Airport)">Cancun (Airport)</option>
+                                            <option value="Tulum (Airport)">Tulum (Airport)</option>
+                                            <option value="Playa del Carmen">Playa del Carmen</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="start_date" class="form-label">Start Date</label>
+                                        <input type="date" class="form-control" id="start_date" name="start_date" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="end_date" class="form-label">End Date</label>
+                                        <input type="date" class="form-control" id="end_date" name="end_date" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Calculate Price</button>
+                                </form>
+                            </div>
+                        </div>
+            <?php
+                    }
+                } else {
+                    echo "<div class='alert alert-warning text-center'>Car not found.</div>";
+                }
+            } else {
+                echo "<div class='alert alert-warning text-center'>No car selected.</div>";
+            }
+
+            $conn->close();
+            ?>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-40">
         <div class="container-fluid">
             <div class="row mb-16 row-gap-4">
                 <div class="col-lg-3">
                     <div class="txt-block">
                         <a href="index.html">
                             <img src="assets/media/footer/logo.png" alt="logo">
+                            <img src="assets/media/footer/Frame-173.png" alt="Frame">
                         </a>
                     </div>
-                    <p class="mb-32">Welcome to White Knight vehicle Rental, offering safety, and reliability for international customers in Quintana roo and Yucatan.</p>
+                    <p class="mb-32">Welcome to White Knight vehicle Rental, offering safety, and reliability for
+                        international customers in Quintana roo and Yucatan.</p>
+
                     <h6 class="white mb-16">Subscribe To Our Newsletter</h6>
                     <form action="index.html" class="newsletter-form">
                         <input type="email" name="email" id="eMail" class="form-input" placeholder=" Your email address">
@@ -278,10 +375,18 @@ $conn->close();
                             <div class="links-block">
                                 <h6 class="mb-32">Quick Links</h6>
                                 <ul class="unstyled">
-                                    <li class="mb-12"><a href="index.html">Home </a></li>
-                                    <li class="mb-12"><a href="about.html">About Us</a></li>
-                                    <li class="mb-12"><a href="blogs.html">Blogs</a></li>
-                                    <li class="mb-12"><a href="contact.html">Contact Us</a></li>
+                                    <li class="mb-12">
+                                        <a href="index.html">Home </a>
+                                    </li>
+                                    <li class="mb-12">
+                                        <a href="about.html">About Us</a>
+                                    </li>
+                                    <li class="mb-12">
+                                        <a href="blogs.html">Blogs</a>
+                                    </li>
+                                    <li class="mb-12">
+                                        <a href="contact.html">Contact Us</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -289,10 +394,18 @@ $conn->close();
                             <div class="links-block">
                                 <h6 class="mb-32">Information</h6>
                                 <ul class="unstyled">
-                                    <li class="mb-12"><a href="rental.html">Rentals</a></li>
-                                    <li class="mb-12"><a href="book-now.html">Booking Form</a></li>
-                                    <li class="mb-12"><a href="booking.html">Booking Details</a></li>
-                                    <li class="mb-12"><a href="index.html">Brands</a></li>
+                                    <li class="mb-12">
+                                        <a href="rental.html">Rentals</a>
+                                    </li>
+                                    <li class="mb-12">
+                                        <a href="book-now.html">Booking Form</a>
+                                    </li>
+                                    <li class="mb-12">
+                                        <a href="booking.html">Booking Details</a>
+                                    </li>
+                                    <li class="mb-12">
+                                        <a href="index.html">Brands</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -304,24 +417,59 @@ $conn->close();
                             <h6 class="mb-32">Contact info</h6>
                         </div>
                         <ul class="unstyled">
-                            <li class="mb-16"><div class="d-flex align-items-center"><i class="fa fa-phone"></i> <a href="tel:00 0000 0000">00 0000 0000</a></div></li>
-                            <li class="mb-16"><div class="d-flex align-items-center"><i class="fa fa-map-marker"></i> <a href="https://goo.gl/maps/xZZtQG7gYfuKbJ8T7" target="_blank">Street Address, City, Country</a></div></li>
-                            <li><div class="d-flex align-items-center"><i class="fa fa-envelope"></i> <a href="mailto:info@whiteknight.com">info@whiteknight.com</a></div></li>
+                            <li class="mb-16">
+                                <div class="contact">
+                                    <img src="assets/media/footer/uil-outgoing-call.png" alt="call-logo">
+                                    <a href="tel:+12345678">+52 1 984 164 2359</a>
+                                </div>
+                            </li>
+                            <li class="mb-16">
+                                <div class="contact">
+                                    <img src="assets/media/footer/uil-map-marker.png" alt="logo">
+                                    <p>Playa del Carmen, Quintana roo</p>
+                                </div>
+                            </li>
+                            <li class="mb-24">
+                                <div class="contact">
+                                    <img src="assets/media/footer/uil-envelope.png" alt="logo">
+                                    <a href="mailto:example@company.com">gemacar4rent@gmail.com</a>
+                                </div>
+                            </li>
                         </ul>
+                        <h5>Follow us!</h5>
+                        <div class="social-icons mb-12">
+                            <ul class="d-flex unstyled gap-12">
+                                <li>
+                                    <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+                                        <i class="fab fa-instagram fa-lg"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.tiktok.com/@whiteknightcarforrent" target="_blank" class="text-white mx-2">
+                                        <i class="fab fa-tiktok fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/61567088864735" target="_blank" class="text-white mx-2">
+                                        <i class="fab fa-facebook fa-lg"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="hr-line  bg-light-gray"></div>
+            <p class="mt-32 pb-32 text-center">@2024 All Rights Copyright <span class="fw-700 color-sec">White knight
+                    vehicle rental car.</span>
+                Design & Developed By abnerck</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/vendor/jquery.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/vendor/smooth-scrollbar.js"></script>
-    <script src="assets/js/vendor/jquery.datetimepicker.full.js"></script>
+    <!-- JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>
-
 </body>
 
 </html>
